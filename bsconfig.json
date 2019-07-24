@@ -6,9 +6,6 @@
   "sources": [
     {
       "dir": "src"
-    },
-    {
-      "dir": "src/__tests__"
     }
   ],
   "package-specs": [
@@ -19,10 +16,6 @@
   ],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": [
-    "reason-react",
-    "bs-react-testing-library",
-    "@glennsl/bs-jest"
-  ],
+  "bs-dependencies": ["reason-react"],
   "refmt": 3
 }

@@ -10,15 +10,17 @@
     "webpack:production": "NODE_ENV=production webpack",
     "server": "webpack-dev-server"
   },
+  "files": [
+    "src/*.re",
+    "src/*.rei",
+    "bsconfig.json"
+  ],
   "keywords": [
     "BuckleScript"
   ],
-  "author": "",
+  "author": "Endre Vegh",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.0",
     "@testing-library/user-event": "^4.2.3"
   },
   "devDependencies": {
@@ -29,6 +31,6 @@
     "webpack-dev-server": "^3.1.8"
   },
   "peerDependencies": {
-    "@testing-library/dom": ">=5"
+    "reason-react": "< 0.8.0"
   }
 }

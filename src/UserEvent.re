@@ -1,4 +1,4 @@
-type userEvent;
+type t;
 
 [@bs.deriving abstract]
 type userOptions = {
@@ -8,17 +8,15 @@ type userOptions = {
   delay: int,
 };
 
-[@bs.module "@testing-library/user-event"]
-external userEvent: userEvent = "default";
+[@bs.module "@testing-library/user-event"] external userEvent: t = "default";
 
-[@bs.send] external click: (userEvent, Dom.element) => unit = "click";
+[@bs.send] external click: (t, Dom.element) => unit = "click";
 [@bs.send]
-external typeText:
-  (userEvent, Dom.element, string, userOptions) => Js.Promise.t(unit) =
+external typeText: (t, Dom.element, string, userOptions) => Js.Promise.t(unit) =
   "type";
-[@bs.send] external dblClick: (userEvent, Dom.element) => unit = "dblClick";
+[@bs.send] external dblClick: (t, Dom.element) => unit = "dblClick";
 [@bs.send]
-external selectOne: (userEvent, Dom.element, string) => unit = "selectOptions";
+external selectOne: (t, Dom.element, string) => unit = "selectOptions";
 [@bs.send]
-external selectMany: (userEvent, Dom.element, array(string)) => unit =
+external selectMany: (t, Dom.element, array(string)) => unit =
   "selectOptions";
